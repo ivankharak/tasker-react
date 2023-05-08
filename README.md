@@ -8,6 +8,10 @@ This app contains a list of tasks in the landing page, which can be created thro
  <img src="./src/media/mockup.png"/>
 
 
+ ### Component Hiararchy
+ <img src="./src/media/component-flow.png"/>
+
+
 
 # Standard Commit Notations
 ### On Version Release
