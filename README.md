@@ -1,5 +1,5 @@
 # tasker-in-react
-A lab project for understanding the latests of Reduxjs
+A lab project for practicing handling forms in reactjs and react states.
 
 ## The Project
 This app contains a list of tasks in the landing page, which can be created through the task creator form that is given below in the page.
