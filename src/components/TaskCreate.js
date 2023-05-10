@@ -1,8 +1,14 @@
 import React from 'react';
 
-const TaskCreate = () => {
+const TaskCreate = ({ onCreate }) => {
+
     return (
-        <div>TaskCreate</div>
+        <div>
+            <h3>Create a Task</h3>
+            <label>Title</label>
+            <br />
+            <input placeholder="Type your task" />
+        </div>
     )
 }
 
