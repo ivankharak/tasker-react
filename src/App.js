@@ -6,7 +6,11 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const createTask = async (title) => {
-    setTasks(title);
+    const updatedTasks = [
+      ...tasks,
+      { id: 2, title: title }
+    ]
+    setTasks(updatedTasks);
   }
 
   useEffect(() => {
