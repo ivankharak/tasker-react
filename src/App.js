@@ -8,7 +8,7 @@ function App() {
   const createTask = async (title) => {
     const updatedTasks = [
       ...tasks,
-      { id: 2, title: title }
+      { id: tasks.length + 1, title: title }
     ]
     setTasks(updatedTasks);
   }

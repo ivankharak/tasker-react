@@ -5,7 +5,7 @@ const TaskCreate = ({ onCreate }) => {
     const [title, setTitle] = useState('');
 
     const handleCreate = async () => {
-        onCreate(await title);
+        onCreate(title);
         setTitle('');
     }
 
