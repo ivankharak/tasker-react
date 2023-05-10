@@ -4,12 +4,20 @@ import { useState } from 'react';
 const TaskCreate = ({ onCreate }) => {
     const [title, setTitle] = useState('');
 
+    const handleCreate = () => {
+        onCreate(title);
+    }
+
     return (
         <div>
             <h3>Create a Task</h3>
-            <label>Title</label>
+            <form onSubmit={(e) => { e.preventDefault(); handleCreate(); }} >
+                <label>Title</label>
+                <br />
+                <input onChange={(e) => setTitle(e.target.value)} value={title} />
+            </form>
             <br />
-            <input onChange={(e) => setTitle(e.target.value)} value={title} />
+            <button onClick={handleCreate}>Create</button>
         </div>
     )
 }
