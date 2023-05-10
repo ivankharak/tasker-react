@@ -17,9 +17,19 @@ function App() {
     console.log(tasks)
   })
 
+  const renderTask = tasks.map((task) => {
+    return (
+      <div key={task.id} >{task.id}. {task.title}</div>
+    )
+  })
+
   return (
     <div className="App">
       Tasker App
+      <div>
+        <br />
+        {renderTask}
+      </div>
       <TaskCreate onCreate={createTask} />
     </div>
   );
