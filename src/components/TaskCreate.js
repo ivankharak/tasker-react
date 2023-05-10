@@ -9,7 +9,7 @@ const TaskCreate = ({ onCreate }) => {
             <h3>Create a Task</h3>
             <label>Title</label>
             <br />
-            <input />
+            <input onChange={(e) => setTitle(e.target.value)} value={title} />
         </div>
     )
 }
