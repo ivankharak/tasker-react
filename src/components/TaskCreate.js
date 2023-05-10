@@ -10,13 +10,13 @@ const TaskCreate = ({ onCreate }) => {
     }
 
     return (
-        <div>
+        <div className='book-create'>
             <h3>Create a Task</h3>
             <form onSubmit={(e) => { e.preventDefault(); handleCreate(); }} >
                 <label>Title</label>
                 <br />
-                <input onChange={(e) => setTitle(e.target.value)} value={title} />
-                <button>Create</button>
+                <input className='input' onChange={(e) => setTitle(e.target.value)} value={title} />
+                <button className='button' >Create</button>
             </form>
         </div>
     )
