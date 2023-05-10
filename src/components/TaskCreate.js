@@ -4,8 +4,9 @@ import { useState } from 'react';
 const TaskCreate = ({ onCreate }) => {
     const [title, setTitle] = useState('');
 
-    const handleCreate = () => {
-        onCreate(title);
+    const handleCreate = async () => {
+        onCreate(await title);
+        setTitle('');
     }
 
     return (
