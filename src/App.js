@@ -5,11 +5,12 @@ import TaskCreate from './components/TaskCreate'
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const createTask = (title) => {
-    console.log(title);
+  const createTask = async (title) => {
+    setTasks(await title);
   }
   return (
     <div className="App">
+      {console.log(tasks)}
       Tasker App
       <TaskCreate onCreate={createTask} />
     </div>
