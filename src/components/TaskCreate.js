@@ -16,9 +16,8 @@ const TaskCreate = ({ onCreate }) => {
                 <label>Title</label>
                 <br />
                 <input onChange={(e) => setTitle(e.target.value)} value={title} />
+                <button>Create</button>
             </form>
-            <br />
-            <button onClick={handleCreate}>Create</button>
         </div>
     )
 }
