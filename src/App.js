@@ -7,11 +7,13 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const createTask = async (title) => {
-    const updatedTasks = [
-      ...tasks,
-      { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: title }
-    ]
-    setTasks(updatedTasks);
+    if (title !== '') {
+      const updatedTasks = [
+        ...tasks,
+        { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: title }
+      ]
+      setTasks(updatedTasks);
+    }
     if (title === "alldone()") {
       setTasks([]);
     }
