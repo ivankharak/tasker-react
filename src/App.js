@@ -1,6 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TaskCreate from './components/TaskCreate'
+import TaskList from "./components/TaskList";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -24,11 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      Tasker App
-      <div>
-        <br />
-        {renderTask}
-      </div>
+      <h1 className="title" >Tasker App</h1>
+      <TaskList tasks={tasks} />
       <TaskCreate onCreate={createTask} />
     </div>
   );
