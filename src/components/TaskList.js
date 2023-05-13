@@ -11,7 +11,9 @@ const TaskList = ({ tasks }) => {
     return (
         <div>
             <h2 className='subtitle' >TaskList</h2>
-            {renderTask}
+            <div className='book-list' >
+                {renderTask}
+            </div>
         </div>
     )
 }
