@@ -2,10 +2,10 @@ import React from 'react';
 import TaskCard from './TaskCard';
 
 const TaskList = ({ tasks, deleteTaskById }) => {
-    const renderTask = tasks.map((task) => {
+    const renderTask = tasks.map((task, index) => {
         return (
             // <div key={task.id}>{task.id}. {task.title}</div>
-            <TaskCard key={task.id} task={task} deleteTaskById={deleteTaskById} />
+            <TaskCard key={task.id} task={task} slnum={index + 1} deleteTaskById={deleteTaskById} />
         )
     })
     return (

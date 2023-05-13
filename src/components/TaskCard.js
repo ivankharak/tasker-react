@@ -1,10 +1,11 @@
 import React from 'react';
 
-const TaskCard = ({ task, deleteTaskById }) => {
+const TaskCard = ({ task, deleteTaskById, slnum }) => {
     return (
         <div>
-            <div className='book-show' key={task.id}>
-                {task.id}. {task.title}
+            <div className='book-show'>
+                <b>{slnum}. </b>
+                {task.title}
                 <button onClick={() => deleteTaskById(task.id)}>delete</button>
             </div>
         </div>
