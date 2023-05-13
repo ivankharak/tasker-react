@@ -6,7 +6,9 @@ const TaskCard = ({ task, deleteTaskById, slnum }) => {
             <div className='book-show'>
                 <b>{slnum}. </b>
                 {task.title}
-                <button onClick={() => deleteTaskById(task.id)}>delete</button>
+                <div className='actions'>
+                    <button className='delete' onClick={() => deleteTaskById(task.id)}>delete</button>
+                </div>
             </div>
         </div>
     )
