@@ -25,10 +25,20 @@ function App() {
     )
   })
 
+  const deleteTaskById = (id) => {
+    const delUpdatedTasks = [
+      ...tasks.filter((task) => {
+        return task.id !== id;
+      })
+    ];
+
+    setTasks(delUpdatedTasks);
+  }
+
   return (
     <div className="app">
       <h1 className="title" >Tasker App</h1>
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
       <TaskCreate onCreate={createTask} />
     </div>
   );
