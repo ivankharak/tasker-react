@@ -26,7 +26,7 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <div className="app">
       <h1 className="title" >Tasker App</h1>
       <TaskList tasks={tasks} />
       <TaskCreate onCreate={createTask} />
