@@ -1,4 +1,5 @@
 # tasker-in-react
+## Introduction
 A lab project for practicing handling forms in reactjs and react states.
 
 ## The Project
@@ -8,10 +9,20 @@ This app contains a list of tasks in the landing page, which can be created thro
  <img src="./src/media/mockup.png"/>
 
 
- ### Component Hiararchy
+### Component Hiararchy
  <img src="./src/media/component-flow.png"/>
 
 
+## Features and Functionalities
+>### Version 1 💡
+>The version 1 of the app contains a Create Task section at the bottom. Whenever user enters some tasks in the given input field and hits the create button, The tasks get displayed on the screen as a ordered list. Besides these functionalities, this version also contains a speciall method in the tasker app that clears all the listed tasks.
+
+### The `alldone()` method
+Whenever user types `alldone()` in the new task input and submits, all the listed tasks gets deleted and the app becomes new.
+
+<br>
+
+<br>
 
 # Standard Commit Notations
 ### On Version Release
