@@ -14,16 +14,10 @@ function App() {
       ]
       setTasks(updatedTasks);
     }
-    if (title === "alldone()") {
+    if (title === "alldone()" || title === "alldel()") {
       setTasks([]);
     }
   }
-
-  const renderTask = tasks.map((task) => {
-    return (
-      <div key={task.id}>{task.id}. {task.title}</div>
-    )
-  })
 
   const deleteTaskById = (id) => {
     const delUpdatedTasks = [
