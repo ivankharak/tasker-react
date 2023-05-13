@@ -7,10 +7,13 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const createTask = async (title) => {
+
+    const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
+
     if (title !== '') {
       const updatedTasks = [
         ...tasks,
-        { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: title }
+        { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: capitalizedTitle }
       ]
       setTasks(updatedTasks);
     }
