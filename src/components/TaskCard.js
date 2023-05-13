@@ -1,8 +1,10 @@
 import React from 'react';
 
-const TaskCard = () => {
+const TaskCard = ({ id, title }) => {
     return (
-        <div>TaskCard</div>
+        <div>
+            <div key={id}>{id}. {title}</div>
+        </div>
     )
 }
 

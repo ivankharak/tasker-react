@@ -5,7 +5,7 @@ const TaskList = ({ tasks }) => {
     const renderTask = tasks.map((task) => {
         return (
             // <div key={task.id}>{task.id}. {task.title}</div>
-            <TaskCard />
+            <TaskCard id={task.id} title={task.title} />
         )
     })
     return (
