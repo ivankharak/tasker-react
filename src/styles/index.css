@@ -146,3 +146,9 @@
     width: 20px;
     z-index: 10
 }
+
+.subtitle {
+    position: absolute;
+    left: 12%;
+    font-size: 22px;
+}

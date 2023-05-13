@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title" >Tasker App</h1>
+      <h1 className="title" >Niyoga</h1>
       <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
       <TaskCreate onCreate={createTask} />
     </div>
