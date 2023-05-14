@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const TaskEdit = ({ onEditTask }) => {
+const TaskEdit = ({ task, onEditTask }) => {
+    const [newTitle, setNewTitle] = useState(task.title);
     return (
         <div>
-            TaskEdit
+            <input onChange={(e) => setNewTitle(e.target.value)} value={newTitle} />
         </div>
     )
 }

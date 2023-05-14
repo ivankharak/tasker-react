@@ -14,7 +14,7 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
         if (showEdit === true) {
             return (
                 <div>
-                    <TaskEdit onEditTask={onEditTask} />
+                    <TaskEdit onEditTask={onEditTask} task={task} />
                 </div>
             )
         }
