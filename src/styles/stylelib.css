@@ -61,6 +61,12 @@
     font-weight: 400;
     background-color: #36ffda;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-box button:hover {
+    background-color: #2cd1b7;
 }
 
 .task-list {
