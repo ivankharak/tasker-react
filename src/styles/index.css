@@ -167,3 +167,16 @@
     left: 12%;
     font-size: 22px;
 }
+
+.inline {
+    display: flex;
+    position: relative;
+}
+
+.task-card-results {
+    margin-left: 5px;
+}
+
+.task-card-results input {
+    font-size: 14px;
+}

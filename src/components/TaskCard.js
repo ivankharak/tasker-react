@@ -7,8 +7,13 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
     const [showEdit, setShowEdit] = useState(false);
 
     const clickHandler = () => {
-        active === '' ? setActive('active') : setActive('');
+        if (showEdit === false) {
+            active === '' ? setActive('active') : setActive('');
+        } else {
+            active === '' ? setActive('') : setActive('active');
+        }
     }
+
 
     const renderTaskEdit = () => {
         if (showEdit === true) {
@@ -23,11 +28,12 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
     return (
         <div>
             <div className={`book-show ${active}`}>
-                <div onClick={clickHandler} >
+                <div onClick={clickHandler} className='inline' >
                     <b>{slnum}. </b>
-                    {task.title}
+                    <div className='task-card-results' >
+                        {showEdit === false ? task.title : renderTaskEdit()}
+                    </div>
                 </div>
-                {renderTaskEdit()}
                 <div className='actions'>
                     <button className='edit' onClick={() => setShowEdit(!showEdit)} >Edit</button>
                     <button className='delete' onClick={() => deleteTaskById(task.id)}>delete</button>
