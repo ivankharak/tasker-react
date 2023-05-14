@@ -25,6 +25,7 @@ const TaskCard = ({ task, deleteTaskById, slnum }) => {
             <div onClick={clickHandler} className={`book-show ${active}`}>
                 <b>{slnum}. </b>
                 {task.title}
+                {renderTaskEdit()}
                 <div className='actions'>
                     <button className='edit' onClick={() => setShowEdit(!showEdit)} >Edit</button>
                     <button className='delete' onClick={() => deleteTaskById(task.id)}>delete</button>
