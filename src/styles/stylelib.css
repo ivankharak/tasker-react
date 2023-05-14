@@ -80,3 +80,8 @@
 .active {
     background-color: aquamarine;
 }
+
+.task-card-container {
+    padding: 20px;
+    height: 100%;
+}

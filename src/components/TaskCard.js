@@ -28,7 +28,7 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
     return (
         <div>
             <div className={`book-show ${active}`}>
-                <div onClick={clickHandler} className='inline' >
+                <div onClick={clickHandler} className='inline task-card-container ' >
                     <b>{slnum}. </b>
                     <div className='task-card-results'>
                         {showEdit === false ? task.title : renderTaskEdit()}
