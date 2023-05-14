@@ -10,7 +10,7 @@ const TaskList = ({ tasks, deleteTaskById }) => {
     })
     return (
         <div>
-            <h2 className='subtitle' >TaskList</h2>
+            {/* <h2 className='subtitle' >TaskList</h2> */}
             <div className='book-list' >
                 {renderTask}
             </div>
