@@ -26,6 +26,9 @@ Whenever user types `alldone()` in the new task input and submits, all the liste
 #### The `alldel()` method
 The `alldel()` method and `alldone()` methods are basically same, but a user can use them on their own contexts.
 
+>### Version 3 `Pokora` 🧆
+>The Version 3 `Pokora` contains a better user experience with the same functionalities of the previous version.
+
 <br>
 
 <br>
