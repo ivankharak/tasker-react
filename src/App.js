@@ -38,7 +38,7 @@ function App() {
       <div className="task-list" >
         <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
       </div>
-      <h1 className="title" >Niyoga</h1>
+      <h1 className="title">Niyoga</h1>
       <TaskCreate onCreate={createTask} />
     </div>
   );
