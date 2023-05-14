@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import '../styles/stylelib.css'
 
 const TaskCreate = ({ onCreate }) => {
     const [title, setTitle] = useState('');

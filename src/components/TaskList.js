@@ -4,13 +4,11 @@ import TaskCard from './TaskCard';
 const TaskList = ({ tasks, deleteTaskById, onEditTask }) => {
     const renderTask = tasks.map((task, index) => {
         return (
-            // <div key={task.id}>{task.id}. {task.title}</div>
             <TaskCard key={task.id} task={task} slnum={index + 1} deleteTaskById={deleteTaskById} onEditTask={onEditTask} />
         )
     })
     return (
         <div>
-            {/* <h2 className='subtitle' >TaskList</h2> */}
             <div className='book-list' >
                 {renderTask}
             </div>

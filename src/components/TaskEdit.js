@@ -7,7 +7,6 @@ const TaskEdit = ({ task, onEditTask, onSetShowEdit }) => {
                 <input onChange={(e) => onEditTask(task.id, e.target.value)} value={task.title} />
                 <button onClick={() => onSetShowEdit(false)}>✔️</button>
             </form>
-            {/* <button onClick={() => onEditTask(task.id, newTitle)} >Update</button> */}
         </div >
     )
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import TaskCreate from './components/TaskCreate'
 import TaskList from "./components/TaskList";
-import './styles/stylelib.css'
 
 function App() {
   const [tasks, setTasks] = useState([]);
