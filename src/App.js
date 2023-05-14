@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import TaskCreate from './components/TaskCreate'
 import TaskList from "./components/TaskList";
+import './styles/stylelib.css'
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -34,8 +35,10 @@ function App() {
 
   return (
     <div className="app">
+      <div className="task-list" >
+        <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
+      </div>
       <h1 className="title" >Niyoga</h1>
-      <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
       <TaskCreate onCreate={createTask} />
     </div>
   );
