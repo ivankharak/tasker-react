@@ -6,4 +6,4 @@ const TaskEdit = () => {
     )
 }
 
-export default TaskEdit
+export default TaskEdit;

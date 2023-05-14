@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TaskEdit from './TaskEdit'
 
 
 const TaskCard = ({ task, deleteTaskById, slnum }) => {
@@ -7,6 +8,16 @@ const TaskCard = ({ task, deleteTaskById, slnum }) => {
 
     const clickHandler = () => {
         active === '' ? setActive('active') : setActive('');
+    }
+
+    const renderTaskEdit = () => {
+        if (showEdit === true) {
+            return (
+                <div>
+                    <TaskEdit />
+                </div>
+            )
+        }
     }
 
     return (
