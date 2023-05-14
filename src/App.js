@@ -34,7 +34,13 @@ function App() {
   }
 
   const handleEditTask = (id, newtitle) => {
-    console.log(newtitle);
+    const editUpdatedTasks = [
+      ...tasks.slice(0, id - 1),
+      { id: id, title: newtitle },
+      ...tasks.slice(id)
+    ]
+
+    setTasks(editUpdatedTasks);
   }
 
   return (
