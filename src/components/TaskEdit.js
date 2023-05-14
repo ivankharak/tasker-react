@@ -1,8 +1,10 @@
 import React from 'react';
 
-const TaskEdit = () => {
+const TaskEdit = ({ onEditTask }) => {
     return (
-        <div>TaskEdit</div>
+        <div>
+            TaskEdit
+        </div>
     )
 }
 

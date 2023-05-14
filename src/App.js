@@ -33,10 +33,14 @@ function App() {
     setTasks(delUpdatedTasks);
   }
 
+  const handleEditTask = (id, newtitle) => {
+    console.log(newtitle);
+  }
+
   return (
     <div className="app">
       <div className="task-list" >
-        <TaskList tasks={tasks} deleteTaskById={deleteTaskById} />
+        <TaskList tasks={tasks} onEditTask={handleEditTask} deleteTaskById={deleteTaskById} />
       </div>
       <h1 className="title">Niyoga</h1>
       <TaskCreate onCreate={createTask} />

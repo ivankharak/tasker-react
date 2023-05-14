@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TaskEdit from './TaskEdit'
 
 
-const TaskCard = ({ task, deleteTaskById, slnum }) => {
+const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
     const [active, setActive] = useState('');
     const [showEdit, setShowEdit] = useState(false);
 
@@ -14,7 +14,7 @@ const TaskCard = ({ task, deleteTaskById, slnum }) => {
         if (showEdit === true) {
             return (
                 <div>
-                    <TaskEdit />
+                    <TaskEdit onEditTask={onEditTask} />
                 </div>
             )
         }
@@ -22,9 +22,11 @@ const TaskCard = ({ task, deleteTaskById, slnum }) => {
 
     return (
         <div>
-            <div onClick={clickHandler} className={`book-show ${active}`}>
-                <b>{slnum}. </b>
-                {task.title}
+            <div className={`book-show ${active}`}>
+                <div onClick={clickHandler} >
+                    <b>{slnum}. </b>
+                    {task.title}
+                </div>
                 {renderTaskEdit()}
                 <div className='actions'>
                     <button className='edit' onClick={() => setShowEdit(!showEdit)} >Edit</button>
