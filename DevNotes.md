@@ -18,3 +18,8 @@ The `alldel()` method and `alldone()` methods are basically same, but a user can
 
 ## Version 3 Pokora 🧆
 The Version 3 `Pokora` contains a better user experience with the same functionalities of the previous version.
+
+---
+
+## Version 4 Begni 🍆
+The Version 4 `Begni` now gives the user option to Edit the tasks. 
