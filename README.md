@@ -20,7 +20,7 @@ This app contains a list of tasks in the landing page, which can be created thro
 #### The `alldone()` method
 Whenever user types `alldone()` in the new task input and submits, all the listed tasks gets deleted and the app becomes new.
 
->### Verison 2 `Kochuri` ✨
+>### Verison 2 `Kochuri` 🍪
 >The Version 2 `Kochuri` contains better styling and a delete button on each tasks. Kochuri also contains functionality that capitalizes the first letter of the task. It also has another method, that is just an alternative of the `alldone()` method.
 
 #### The `alldel()` method
