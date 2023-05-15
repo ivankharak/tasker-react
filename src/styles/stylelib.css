@@ -85,3 +85,7 @@
     padding: 20px;
     height: 100%;
 }
+
+.task-edit-form input {
+    margin-right: 8px;
+}
