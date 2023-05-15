@@ -28,7 +28,7 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
     return (
         <div>
             <div className={`book-show ${active}`}>
-                <img alt='tasks' src={`https://picsum.photos/seed/${task.title}/300/200`} />
+                {/* <img alt='tasks' src={`https://picsum.photos/seed/${task.title}/300/200`} /> */}
                 <div onClick={clickHandler} className='inline task-card-container ' >
                     <b>{slnum}. </b>
                     <div className='task-card-results'>
