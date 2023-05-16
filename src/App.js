@@ -41,7 +41,7 @@ function App() {
   }
 
   const deleteTaskById = async (id) => {
-    const res = await axios.delete(`http://localhost:3001/tasks/${id}`);
+    await axios.delete(`http://localhost:3001/tasks/${id}`);
 
     const delUpdatedTasks = [
       ...tasks.filter((task) => {
