@@ -17,7 +17,7 @@ function App() {
   const createTask = async (title) => {
     const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-    if (title !== '') {
+    if (title !== '' && title !== "alldone()" && title !== "alldel()") {
       const res = await axios.post('http://localhost:3001/tasks', {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
         title: capitalizedTitle
@@ -34,6 +34,9 @@ function App() {
     // Custom Methods
     // --------------------------------------------------------------------------
     if (title === "alldone()" || title === "alldel()") {
+      tasks.map(async (task) => {
+        await axios.delete(`http://localhost:3001/tasks/${task.id}`)
+      })
       setTasks([]);
     }
     // --------------------------------------------------------------------------
