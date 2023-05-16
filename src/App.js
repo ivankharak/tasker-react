@@ -8,15 +8,15 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const createTask = async (title) => {
+    const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
     const res = await axios.post('http://localhost:3001/tasks', {
-      title: title
+      title: capitalizedTitle
     })
 
     console.log(res);
 
     // // This function takes value from the TaskCreate component and creates an object and updates the state
-    // const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
     // if (title !== '') {
     //   const updatedTasks = [
     //     ...tasks,
