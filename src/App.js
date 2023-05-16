@@ -56,7 +56,7 @@ function App() {
   const handleEditTask = async (newTask) => {
     const editUpdatedTasks = [
       ...tasks.slice(0, newTask.id - 1),
-      { id: newTask.id, title: newTask.title },
+      newTask,
       ...tasks.slice(newTask.id)
     ]
     setTasks(editUpdatedTasks);
