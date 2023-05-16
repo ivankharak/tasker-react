@@ -7,6 +7,11 @@ import axios from "axios";
 function App() {
   const [tasks, setTasks] = useState([]);
 
+  (async () => {
+    const existingData = await axios.get('http://localhost:3001/tasks');
+    setTasks(existingData.data);
+  })();
+
   const createTask = async (title) => {
     const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
