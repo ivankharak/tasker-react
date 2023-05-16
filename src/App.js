@@ -15,14 +15,14 @@ function App() {
         title: capitalizedTitle
       })
       console.log(res);
-    }
 
-    // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
-    const updatedTasks = [
-      ...tasks,
-      res.data
-    ]
-    setTasks(updatedTasks);
+      // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
+      const updatedTasks = [
+        ...tasks,
+        res.data
+      ]
+      setTasks(updatedTasks);
+    }
 
     // Custom Methods
     // --------------------------------------------------------------------------
