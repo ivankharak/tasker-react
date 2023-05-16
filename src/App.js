@@ -48,14 +48,9 @@ function App() {
     setTasks(delUpdatedTasks);
   }
 
-  const handleEditTask = (id, newtitle) => {
-    const editUpdatedTasks = [
-      ...tasks.slice(0, id - 1),
-      { id: id, title: newtitle },
-      ...tasks.slice(id)
-    ]
-
-    setTasks(editUpdatedTasks);
+  const handleEditTask = async (newTaskObj) => {
+    const existingData = await axios.get('http://localhost:3001/tasks');
+    setTasks(existingData.data);
   }
 
   return (
