@@ -17,18 +17,20 @@ function App() {
       console.log(res);
     }
 
+    // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
+    const updatedTasks = [
+      ...tasks,
+      res.data
+    ]
+    setTasks(updatedTasks);
 
-    // // This function takes value from the TaskCreate component and creates an object and updates the state
-    // if (title !== '') {
-    //   const updatedTasks = [
-    //     ...tasks,
-    //     { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: capitalizedTitle }
-    //   ]
-    //   setTasks(updatedTasks);
-    // }
-    // if (title === "alldone()" || title === "alldel()") {
-    //   setTasks([]);
-    // }
+    // Custom Methods
+    // --------------------------------------------------------------------------
+    if (title === "alldone()" || title === "alldel()") {
+      setTasks([]);
+    }
+    // --------------------------------------------------------------------------
+
   }
 
   const deleteTaskById = (id) => {
