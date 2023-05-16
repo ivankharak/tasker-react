@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TaskEdit = ({ task, onEditTask, onSetShowEdit }) => {
+const TaskEdit = ({ task, onTaskEditSubmit }) => {
+    const [newTitle, SetNewTitle] = useState(task.title);
     return (
         <div >
             <form onSubmit={(e) => e.preventDefault()} className="book-edit" >
-                <input className="input" onChange={(e) => onEditTask(task.id, e.target.value)} value={task.title} />
-                <button onClick={() => onSetShowEdit(false)} className="button is-primary" >Update</button>
+                <input className="input" onChange={(e) => SetNewTitle(e.target.value)} value={newTitle} />
+                <button onClick={(e) => onTaskEditSubmit(task.id, newTitle)} className="button is-primary" >Update</button>
             </form>
         </div >
     )

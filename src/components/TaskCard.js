@@ -14,12 +14,17 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
         }
     }
 
+    const handleTaskEditSubmit = (id, newTitle) => {
+        onEditTask(id, newTitle);
+        setShowEdit(false);
+    }
+
 
     const renderTaskEdit = () => {
         if (showEdit === true) {
             return (
                 <div>
-                    <TaskEdit onEditTask={onEditTask} task={task} onSetShowEdit={setShowEdit} />
+                    <TaskEdit onTaskEditSubmit={handleTaskEditSubmit} task={task} onSetShowEdit={setShowEdit} />
                 </div>
             )
         }

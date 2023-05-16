@@ -17,6 +17,7 @@ function App() {
 
     if (title !== '') {
       const res = await axios.post('http://localhost:3001/tasks', {
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
         title: capitalizedTitle
       })
 
