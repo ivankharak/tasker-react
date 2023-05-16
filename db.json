@@ -1,3 +1,8 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": 1,
+      "title": "First task of the day. (edited)"
+    }
+  ]
 }

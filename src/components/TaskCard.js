@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TaskEdit from './TaskEdit'
+import axios from 'axios';
 
 
 const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
@@ -14,7 +15,11 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
         }
     }
 
-    const handleTaskEditSubmit = (id, newTitle) => {
+    const handleTaskEditSubmit = async (id, newTitle) => {
+        const res = await axios.put(`http://localhost:3001/tasks/${id}`, {
+            id: id,
+            title: newTitle
+        })
         onEditTask(id, newTitle);
         setShowEdit(false);
     }
