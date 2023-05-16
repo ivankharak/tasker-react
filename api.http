@@ -1,0 +1,26 @@
+GET http://localhost:3001/tasks HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3001/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"Water the trees",
+    "id":"02"
+}
+
+###
+
+PUT http://localhost:3001/tasks/01 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"Plant a Tree"
+}
+
+###
+
+DELETE http://localhost:3001/tasks/qQcodjT HTTP/1.1
+Content-Type: application/json
