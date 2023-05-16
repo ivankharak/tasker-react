@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskCreate from './components/TaskCreate'
 import TaskList from "./components/TaskList";
 import axios from "axios";
@@ -7,10 +7,10 @@ import axios from "axios";
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  (async () => {
+  useEffect(async () => {
     const existingData = await axios.get('http://localhost:3001/tasks');
     setTasks(existingData.data);
-  })();
+  }, [])
 
   const createTask = async (title) => {
     const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
