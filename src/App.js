@@ -9,18 +9,24 @@ function App() {
 
   const createTask = async (title) => {
 
-    // This function takes value from the TaskCreate component and creates an object and updates the state
-    const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
-    if (title !== '') {
-      const updatedTasks = [
-        ...tasks,
-        { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: capitalizedTitle }
-      ]
-      setTasks(updatedTasks);
-    }
-    if (title === "alldone()" || title === "alldel()") {
-      setTasks([]);
-    }
+    const res = await axios.post('http://localhost:3001/tasks', {
+      title: title
+    })
+
+    console.log(res);
+
+    // // This function takes value from the TaskCreate component and creates an object and updates the state
+    // const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
+    // if (title !== '') {
+    //   const updatedTasks = [
+    //     ...tasks,
+    //     { id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1, title: capitalizedTitle }
+    //   ]
+    //   setTasks(updatedTasks);
+    // }
+    // if (title === "alldone()" || title === "alldel()") {
+    //   setTasks([]);
+    // }
   }
 
   const deleteTaskById = (id) => {
