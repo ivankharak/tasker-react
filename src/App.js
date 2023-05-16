@@ -14,7 +14,6 @@ function App() {
       const res = await axios.post('http://localhost:3001/tasks', {
         title: capitalizedTitle
       })
-      console.log(res);
 
       // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
       const updatedTasks = [
