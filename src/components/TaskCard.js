@@ -20,7 +20,7 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
             id: id,
             title: newTitle + ' (edited)'
         })
-        onEditTask();
+        onEditTask(res.data);
         setShowEdit(false);
     }
 

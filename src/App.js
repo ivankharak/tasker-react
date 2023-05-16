@@ -41,6 +41,8 @@ function App() {
   }
 
   const deleteTaskById = async (id) => {
+    const res = await axios.delete(`http://localhost:3001/${id}`);
+    console.log(res);
 
     const delUpdatedTasks = [
       ...tasks.filter((task) => {
@@ -51,9 +53,13 @@ function App() {
     setTasks(delUpdatedTasks);
   }
 
-  const handleEditTask = async () => {
-    const existingData = await axios.get('http://localhost:3001/tasks');
-    setTasks(existingData.data);
+  const handleEditTask = async (newTask) => {
+    const editUpdatedTasks = [
+      ...tasks.slice(0, newTask.id - 1),
+      { id: newTask.id, title: newTask.title },
+      ...tasks.slice(newTask.id)
+    ]
+    setTasks(editUpdatedTasks);
   }
 
   return (
