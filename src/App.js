@@ -7,9 +7,11 @@ import axios from "axios";
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  useEffect(async () => {
-    const existingData = await axios.get('http://localhost:3001/tasks');
-    setTasks(existingData.data);
+  useEffect(() => {
+    (async () => {
+      const existingData = await axios.get('http://localhost:3001/tasks');
+      setTasks(existingData.data);
+    })();
   }, [])
 
   const createTask = async (title) => {
@@ -38,7 +40,8 @@ function App() {
 
   }
 
-  const deleteTaskById = (id) => {
+  const deleteTaskById = async (id) => {
+
     const delUpdatedTasks = [
       ...tasks.filter((task) => {
         return task.id !== id;
@@ -48,7 +51,7 @@ function App() {
     setTasks(delUpdatedTasks);
   }
 
-  const handleEditTask = async (newTaskObj) => {
+  const handleEditTask = async () => {
     const existingData = await axios.get('http://localhost:3001/tasks');
     setTasks(existingData.data);
   }
