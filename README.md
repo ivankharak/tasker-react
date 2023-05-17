@@ -32,6 +32,10 @@ The `alldel()` method and `alldone()` methods are basically same, but a user can
 >### Version 4 Begni 🍆
 >The Version 4 `Begni` now gives the user option to Edit the tasks. 
 
+>### Version 5 Piyaji 🍪
+>The Version 5 `Piyaji` of the Niyoga app has a backend support and all the data get's fetch from a json server. In result, the app will have all the data preserved even if the app is closed.
+>The custom methods are restored as well. The methods will delete all the data from the database.
+
 <br>
 
 <br>
