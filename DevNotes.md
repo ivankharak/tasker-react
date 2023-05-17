@@ -29,3 +29,19 @@ The Version 4 `Begni` now gives the user option to Edit the tasks.
 ## Version 5 Piyaji 🍪
 The Version 5 `Piyaji` of the Niyoga app has a backend support and all the data get's fetch from a json server. In result, the app will have all the data preserved even if the app is closed.
 The custom methods are restored as well. The methods will delete all the data from the database.
+
+
+
+---
+---
+---
+
+
+## Version 6 Planning
+* **Name** - 
+* **Major Updates** - The alldone() method will mark all tasks green rather than deleting it. And the backend server will be updated the status done so that whenever app is reloaded the green tasks remains green.
+
+### How will we achieve this - 
+1. We will create a new field in the task objects in the server as `status`. This data field will be a boolean `data type`.
+1. The status will remain `false` as default.
+1. Whenever the card is clicked (the `clickHandler()` function is invoked in the TaskCard component) the server will get a put request of toggling the `status` data.

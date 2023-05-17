@@ -20,7 +20,7 @@ function App() {
     if (title !== '' && title !== "alldone()" && title !== "alldel()") {
       const res = await axios.post('http://localhost:3001/tasks', {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
-        title: capitalizedTitle
+        title: capitalizedTitle,
       })
 
       // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
