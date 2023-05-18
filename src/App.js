@@ -34,11 +34,18 @@ function App() {
 
     // Custom Methods
     // --------------------------------------------------------------------------
-    if (title === "alldone()" || title === "alldel()") {
+    if (title === "alldel()") {
       tasks.map(async (task) => {
         await axios.delete(`http://localhost:3001/tasks/${task.id}`)
       })
       setTasks([]);
+    } else if (title === "alldone()") {
+      tasks.map(async (task) => {
+        axios.put(`http://localhost:3001/tasks/${task.id}`, {
+          title: task.title,
+          status: true
+        })
+      })
     }
     // --------------------------------------------------------------------------
 
