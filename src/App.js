@@ -6,18 +6,19 @@ import axios from "axios";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [reloader, setReloader] = useState(false);
 
   useEffect(() => {
     (async () => {
       const existingData = await axios.get('http://localhost:3001/tasks');
       setTasks(existingData.data);
     })();
-  }, [])
+  }, [reloader])
 
   const createTask = async (title) => {
     const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-    if (title !== '' && title !== "alldone()" && title !== "alldel()") {
+    if (title !== '' && title !== "alldone()" && title !== "alldel()" && title !== "allundone()") {
       const res = await axios.post('http://localhost:3001/tasks', {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
         title: capitalizedTitle,
@@ -40,12 +41,50 @@ function App() {
       })
       setTasks([]);
     } else if (title === "alldone()") {
-      tasks.map(async (task) => {
-        axios.put(`http://localhost:3001/tasks/${task.id}`, {
-          title: task.title,
-          status: true
-        })
-      })
+      (async () => {
+        // const updatedDoneMethodTasks = tasks;
+        tasks.map(async (task, i) => {
+          await axios.put(`http://localhost:3001/tasks/${task.id}`, {
+            title: task.title,
+            status: true
+          });
+          setReloader(!reloader);
+          // updatedDoneMethodTasks[task.id - 1] = res.data;
+          // if (i === tasks.length - 1) {
+          // }
+        });
+
+
+        // const res = await axios.put('http://localhost:3001/tasks/', updatedDoneMethodTasks)
+
+        // console.log(res.data);
+
+        // const res = await axios.get('http://localhost:3001/tasks');
+        // setTasks(res.data);
+      })();
+    } else if (title === "allundone()") {
+      (async () => {
+        // const updatedDoneMethodTasks = tasks;
+        tasks.map(async (task, i) => {
+          await axios.put(`http://localhost:3001/tasks/${task.id}`, {
+            title: task.title,
+            status: false
+          });
+          setReloader(!reloader);
+          // updatedDoneMethodTasks[task.id - 1] = res.data;
+          // if (i === tasks.length - 1) {
+          //   setReloader(!reloader);
+          // }
+        });
+
+
+        // const res = await axios.put('http://localhost:3001/tasks/', updatedDoneMethodTasks)
+
+        // console.log(res.data);
+
+        // const res = await axios.get('http://localhost:3001/tasks');
+        // setTasks(res.data);
+      })();
     }
     // --------------------------------------------------------------------------
 
@@ -75,7 +114,7 @@ function App() {
   return (
     <div className="app">
       <div className="task-list" >
-        <TaskList tasks={tasks} onEditTask={handleEditTask} deleteTaskById={deleteTaskById} />
+        <TaskList tasks={tasks} reloader={reloader} onEditTask={handleEditTask} deleteTaskById={deleteTaskById} />
       </div>
       <h1 className="title">Niyoga v6</h1>
       <TaskCreate onCreate={createTask} />

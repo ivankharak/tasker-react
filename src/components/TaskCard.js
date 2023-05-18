@@ -3,15 +3,17 @@ import TaskEdit from './TaskEdit'
 import axios from 'axios';
 
 
-const TaskCard = ({ task, deleteTaskById, slnum, onEditTask }) => {
+const TaskCard = ({ task, deleteTaskById, slnum, onEditTask, reloader }) => {
     const [active, setActive] = useState('');
     const [showEdit, setShowEdit] = useState(false);
 
+    console.log(reloader);
+
     useEffect(() => {
         (async () => {
-            task.status === true ? setActive('active') : setActive('');
+            await task.status === true ? setActive('active') : setActive('');
         })();
-    }, [])
+    }, [task, reloader])
 
     const clickHandler = async () => {
         if (showEdit === false) {
