@@ -45,3 +45,4 @@ The custom methods are restored as well. The methods will delete all the data fr
 1. We will create a new field in the task objects in the server as `status`. This data field will be a boolean `data type`.
 1. The status will remain `false` as default.
 1. Whenever the card is clicked (the `clickHandler()` function is invoked in the TaskCard component) the server will get a put request of toggling the `status` data.
+1. Change the functionality of `alldone()` method to mark all task's status as true.
