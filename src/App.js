@@ -25,7 +25,6 @@ function App() {
         status: false,
       })
 
-      // The code below takes a object from the json server post request responce and creates an array of objects and also updates the state.
       const updatedTasks = [
         ...tasks,
         res.data
@@ -33,7 +32,6 @@ function App() {
       setTasks(updatedTasks);
     }
 
-    // Custom Methods
     // --------------------------------------------------------------------------
     if (title === "alldel()") {
       tasks.map(async (task) => {
@@ -42,48 +40,23 @@ function App() {
       setTasks([]);
     } else if (title === "alldone()") {
       (async () => {
-        // const updatedDoneMethodTasks = tasks;
         tasks.map(async (task, i) => {
           await axios.put(`http://localhost:3001/tasks/${task.id}`, {
             title: task.title,
             status: true
           });
           setReloader(!reloader);
-          // updatedDoneMethodTasks[task.id - 1] = res.data;
-          // if (i === tasks.length - 1) {
-          // }
         });
-
-
-        // const res = await axios.put('http://localhost:3001/tasks/', updatedDoneMethodTasks)
-
-        // console.log(res.data);
-
-        // const res = await axios.get('http://localhost:3001/tasks');
-        // setTasks(res.data);
       })();
     } else if (title === "allundone()") {
       (async () => {
-        // const updatedDoneMethodTasks = tasks;
         tasks.map(async (task, i) => {
           await axios.put(`http://localhost:3001/tasks/${task.id}`, {
             title: task.title,
             status: false
           });
           setReloader(!reloader);
-          // updatedDoneMethodTasks[task.id - 1] = res.data;
-          // if (i === tasks.length - 1) {
-          //   setReloader(!reloader);
-          // }
         });
-
-
-        // const res = await axios.put('http://localhost:3001/tasks/', updatedDoneMethodTasks)
-
-        // console.log(res.data);
-
-        // const res = await axios.get('http://localhost:3001/tasks');
-        // setTasks(res.data);
       })();
     }
     // --------------------------------------------------------------------------

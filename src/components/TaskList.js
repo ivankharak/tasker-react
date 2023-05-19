@@ -7,7 +7,6 @@ const TaskList = ({ tasks, deleteTaskById, onEditTask, reloader }) => {
             <TaskCard key={task.id} task={task} reloader={reloader} slnum={index + 1} deleteTaskById={deleteTaskById} onEditTask={onEditTask} />
         )
     })
-    // console.log(reloader);
     return (
         <div>
             <div className='book-list' >
