@@ -30,6 +30,10 @@ The Version 4 `Begni` now gives the user option to Edit the tasks.
 The Version 5 `Piyaji` of the Niyoga app has a backend support and all the data get's fetch from a json server. In result, the app will have all the data preserved even if the app is closed.
 The custom methods are restored as well. The methods will delete all the data from the database.
 
+## Version 6 Chopp 🧉
+In The Version 6 `Chopp` of the Niyoga app the `alldone()` method's functionality has been changed to marking all task green. On the other side a new method is on board `allundone()`, which will do exactly the opposite of `alldone()`, meaning will remove green from all tasks.
+
+Issue :- Although the app now hot three methods to increase productivity, the backend json server is not really able to handle repeated tens requests. Hence when the app has many tasks listed the methods will not work properly. This will fixed in the next versions, as we will use other servers.
 
 
 ---
