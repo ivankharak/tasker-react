@@ -7,8 +7,6 @@ const TaskCard = ({ task, deleteTaskById, slnum, onEditTask, reloader }) => {
     const [active, setActive] = useState('');
     const [showEdit, setShowEdit] = useState(false);
 
-    console.log(reloader);
-
     useEffect(() => {
         (async () => {
             await task.status === true ? setActive('active') : setActive('');
