@@ -37,7 +37,7 @@ The custom methods are restored as well. The methods will delete all the data fr
 ---
 
 
-## Version 6 Planning
+## Version 5s Planning
 * **Name** - 
 * **Major Updates** - The alldone() method will mark all tasks green rather than deleting it. And the backend server will be updated the status done so that whenever app is reloaded the green tasks remains green.
 
