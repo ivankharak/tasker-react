@@ -6,7 +6,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+import TasksContext from './contexts/tasks';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <TasksContext.Provider value={"Dummy Data"}>
+    <App />
+  </TasksContext.Provider>
 );
