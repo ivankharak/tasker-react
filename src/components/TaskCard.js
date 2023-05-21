@@ -39,7 +39,7 @@ const TaskCard = ({ task, slnum }) => {
         if (showEdit === true) {
             return (
                 <div>
-                    <TaskEdit onTaskEditSubmit={handleTaskEditSubmit} task={task} onSetShowEdit={setShowEdit} />
+                    <TaskEdit onTaskEditSubmit={handleTaskEditSubmit} onSetShowEdit={setShowEdit} />
                 </div>
             )
         }
