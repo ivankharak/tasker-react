@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import TasksContext from '../contexts/tasks';
 
 const TaskCreate = ({ onCreate }) => {
     const [title, setTitle] = useState('');
@@ -9,8 +8,6 @@ const TaskCreate = ({ onCreate }) => {
         onCreate(title);
         setTitle('');
     }
-
-    const { counter, incrementCounter } = useContext(TasksContext)
 
     return (
         <div className='task-create'>
@@ -22,10 +19,6 @@ const TaskCreate = ({ onCreate }) => {
                         <button>Create</button>
                     </div>
                 </form>
-                <label>
-                    {counter}
-                </label>
-                <button onClick={incrementCounter}>Increment</button>
             </div>
         </div>
     )
