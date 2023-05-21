@@ -3,10 +3,10 @@ import TaskCard from './TaskCard';
 import TasksContext from '../contexts/tasks';
 
 const TaskList = () => {
-    const { tasks, deleteTaskById, onEditTask, reloader } = useContext(TasksContext);
+    const { tasks } = useContext(TasksContext);
     const renderTask = tasks.map((task, index) => {
         return (
-            <TaskCard key={task.id} task={task} reloader={reloader} slnum={index + 1} deleteTaskById={deleteTaskById} onEditTask={onEditTask} />
+            <TaskCard key={task.id} task={task} slnum={index + 1} />
         )
     })
     return (
