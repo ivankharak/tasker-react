@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TaskCard from './TaskCard';
+import TasksContext from '../contexts/tasks';
 
-const TaskList = ({ tasks, deleteTaskById, onEditTask, reloader }) => {
+const TaskList = () => {
+    const { tasks, deleteTaskById, onEditTask, reloader } = useContext(TasksContext);
     const renderTask = tasks.map((task, index) => {
         return (
             <TaskCard key={task.id} task={task} reloader={reloader} slnum={index + 1} deleteTaskById={deleteTaskById} onEditTask={onEditTask} />
