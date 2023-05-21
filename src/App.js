@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import TaskCreate from './components/TaskCreate'
 import TaskList from "./components/TaskList";
 import axios from "axios";
