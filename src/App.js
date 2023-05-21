@@ -87,10 +87,10 @@ function App() {
   return (
     <div className="app">
       <div className="task-list" >
-        <TaskList tasks={tasks} reloader={reloader} onEditTask={handleEditTask} deleteTaskById={deleteTaskById} />
+        <TaskList />
       </div>
       <h1 className="title">Niyoga v6</h1>
-      <TaskCreate onCreate={createTask} />
+      <TaskCreate />
     </div>
   );
 }
