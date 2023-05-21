@@ -5,7 +5,7 @@ import TasksContext from '../contexts/tasks';
 
 
 const TaskCard = ({ task, slnum }) => {
-    const { deleteTaskById, onEditTask, reloader } = useContext(TasksContext);
+    const { deleteTaskById, handleEditTask, reloader } = useContext(TasksContext);
     const [active, setActive] = useState('');
     const [showEdit, setShowEdit] = useState(false);
 
@@ -30,7 +30,7 @@ const TaskCard = ({ task, slnum }) => {
             id: id,
             title: newTitle + ' (edited)'
         })
-        onEditTask(res.data);
+        handleEditTask(res.data);
         setShowEdit(false);
     }
 
@@ -39,7 +39,7 @@ const TaskCard = ({ task, slnum }) => {
         if (showEdit === true) {
             return (
                 <div>
-                    <TaskEdit onTaskEditSubmit={handleTaskEditSubmit} onSetShowEdit={setShowEdit} />
+                    <TaskEdit task={task} onTaskEditSubmit={handleTaskEditSubmit} />
                 </div>
             )
         }

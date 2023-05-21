@@ -2,11 +2,11 @@ import React, { useContext, useState } from 'react';
 import TasksContext from '../contexts/tasks';
 
 const TaskCreate = () => {
-    const { onCreate } = useContext(TasksContext);
+    const { createTask } = useContext(TasksContext);
     const [title, setTitle] = useState('');
 
     const handleCreate = async () => {
-        onCreate(title);
+        createTask(title);
         setTitle('');
     }
 
