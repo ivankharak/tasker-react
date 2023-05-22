@@ -10,7 +10,7 @@ const Provider = ({ children }) => {
     const createTask = async (title) => {
         const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-        if (title !== '' && title !== "alldone()" && title !== "alldel()" && title !== "allundone()") {
+        if (title !== '' && title !== "alldone()" && title !== "alldel()" && title !== "allundone()" && title !== "allgreen()" && title !== "green()" && title !== "done()" && title !== "del()" && title !== "delete()") {
             const res = await axios.post('http://localhost:3001/tasks', {
                 id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
                 title: capitalizedTitle,
@@ -30,7 +30,7 @@ const Provider = ({ children }) => {
                 await axios.delete(`http://localhost:3001/tasks/${task.id}`)
             })
             setTasks([]);
-        } else if (title === "alldone()") {
+        } else if (title === "alldone()" || title === "allgreen()" || title === "green()" || title === "done()") {
             (async () => {
                 tasks.map(async (task, i) => {
                     await axios.put(`http://localhost:3001/tasks/${task.id}`, {
