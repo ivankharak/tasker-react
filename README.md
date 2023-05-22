@@ -17,14 +17,14 @@ This app contains a list of tasks in the landing page, which can be created thro
 >### Version 1 `Singara`💡
 >The version 1 of the app contains a Create Task section at the bottom. Whenever user enters some tasks in the given input field and hits the create button, The tasks get displayed on the screen as a ordered list. Besides these functionalities, this version also contains a speciall method in the tasker app that clears all the listed tasks.
 
-#### The `alldone()` method
-Whenever user types `alldone()` in the new task input and submits, all the listed tasks gets deleted and the app becomes new.
+>#### The `alldone()` method
+>Whenever user types `alldone()` in the new task input and submits, all the listed tasks gets deleted and the app becomes new.
 
 >### Verison 2 `Kochuri` 🍪
 >The Version 2 `Kochuri` contains better styling and a delete button on each tasks. Kochuri also contains functionality that capitalizes the first letter of the task. It also has another method, that is just an alternative of the `alldone()` method.
 
-#### The `alldel()` method
-The `alldel()` method and `alldone()` methods are basically same, but a user can use them on their own contexts.
+>#### The `alldel()` method
+>The `alldel()` method and `alldone()` methods are basically same, but a user can use them on their own contexts.
 
 >### Version 3 `Pokora` 🧆
 >The Version 3 `Pokora` contains a better user experience with the same functionalities of the previous version.
@@ -40,6 +40,31 @@ The `alldel()` method and `alldone()` methods are basically same, but a user can
 >In The Version 6 `Chopp` of the Niyoga app the `alldone()` method's functionality has been changed to marking all task green. On the other side a new method is on board `allundone()`, which will do exactly the opposite of `alldone()`, meaning will remove green from all tasks.
 >
 >**Issue** :- Although the app now hot three methods to increase productivity, the backend json server is not really able to handle repeated tens requests. Hence when the app has many tasks listed the methods will not work properly. This will fixed in the next versions, as we will use other servers.
+
+>### Version 7 Gathia 🥖
+>Version 7 `Gathia` simply uses the context system from react rather than only states & props. This gives more clear code to understand and better user and development performance. 
+Also the version 7 got introduced with some more methods. Those are - 
+
+>#### The Done methods
+>These methods can be used to mark all tasks as done.
+>* `alldone()` 
+>* `allgreen()` 
+>* `green()`
+>* `done()` 
+
+>#### The Undone methods
+>These methods can be used for marking all tasks as undone.
+>* `allundone()`
+>* `undone()`
+>* `reset()`
+
+>#### The Delete methods
+>These methods can be used for deleting all tasks at once.
+>* `alldel()`
+>* `del()`
+>* `delete()`
+
+
 
 <br>
 
