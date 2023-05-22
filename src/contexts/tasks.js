@@ -10,7 +10,7 @@ const Provider = ({ children }) => {
     const createTask = async (title) => {
         const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-        if (title !== '' && title !== "alldone()" && title !== "alldel()" && title !== "allundone()" && title !== "allgreen()" && title !== "green()" && title !== "done()" && title !== "del()" && title !== "delete()") {
+        if (title !== '' && title !== "alldone()" && title !== "alldel()" && title !== "allundone()" && title !== "allgreen()" && title !== "green()" && title !== "done()" && title !== "del()" && title !== "delete()" && title !== "undone()" && title !== "reset()") {
             const res = await axios.post('http://localhost:3001/tasks', {
                 id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
                 title: capitalizedTitle,
@@ -40,7 +40,7 @@ const Provider = ({ children }) => {
                     setReloader(!reloader);
                 });
             })();
-        } else if (title === "allundone()") {
+        } else if (title === "allundone()" || title === "undone()" || title === "reset()") {
             (async () => {
                 tasks.map(async (task, i) => {
                     await axios.put(`http://localhost:3001/tasks/${task.id}`, {
