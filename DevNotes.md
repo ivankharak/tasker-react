@@ -35,6 +35,29 @@ In The Version 6 `Chopp` of the Niyoga app the `alldone()` method's functionalit
 
 Issue :- Although the app now hot three methods to increase productivity, the backend json server is not really able to handle repeated tens requests. Hence when the app has many tasks listed the methods will not work properly. This will fixed in the next versions, as we will use other servers.
 
+## Version 7 Gathia 🥖
+Version 7 `Gathia` simply uses the context system from react rather than only states & props. This gives more clear code to understand and better user and development performance. 
+Also the version 7 got introduced with some more methods. Those are - 
+
+### The Done methods
+ These methods can be used to mark all tasks as done.
+* `alldone()` 
+* `allgreen()` 
+* `green()`
+* `done()` 
+
+### The Undone methods
+These methods can be used for marking all tasks as undone.
+* `allundone()`
+* `undone()`
+* `reset()`
+
+### The Delete methods
+These methods can be used for deleting all tasks at once.
+* `alldel()`
+* `del()`
+* `delete()`
+
 
 ---
 ---
