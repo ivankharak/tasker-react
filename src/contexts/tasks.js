@@ -25,7 +25,7 @@ const Provider = ({ children }) => {
         }
 
         // --------------------------------------------------------------------------
-        if (title === "alldel()") {
+        if (title === "alldel()" || title === "del()" || title === "delete()") {
             tasks.map(async (task) => {
                 await axios.delete(`http://localhost:3001/tasks/${task.id}`)
             })
