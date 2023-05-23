@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import TaskEdit from './TaskEdit'
 import axios from 'axios';
-import TasksContext from '../contexts/tasks';
+import useTasksContext from '../hooks/useTasksContext';
 
 
 const TaskCard = ({ task, slnum }) => {
-    const { deleteTaskById, handleEditTask, reloader } = useContext(TasksContext);
+    const { deleteTaskById, handleEditTask, reloader } = useTasksContext();
     const [active, setActive] = useState('');
     const [showEdit, setShowEdit] = useState(false);
 

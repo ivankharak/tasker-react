@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import TaskCard from './TaskCard';
-import TasksContext from '../contexts/tasks';
+import useTasksContext from '../hooks/useTasksContext';
 
 const TaskList = () => {
-    const { tasks } = useContext(TasksContext);
+    const { tasks } = useTasksContext();
     const renderTask = tasks.map((task, index) => {
         return (
             <TaskCard key={task.id} task={task} slnum={index + 1} />

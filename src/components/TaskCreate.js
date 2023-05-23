@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import TasksContext from '../contexts/tasks';
+import React, { useState } from 'react';
+import useTasksContext from '../hooks/useTasksContext';
 
 const TaskCreate = () => {
-    const { createTask } = useContext(TasksContext);
+    const { createTask } = useTasksContext();
     const [title, setTitle] = useState('');
 
     const handleCreate = async () => {
