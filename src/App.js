@@ -14,7 +14,7 @@ function App() {
       const existingData = await axios.get('http://localhost:3001/tasks');
       setTasks(existingData.data);
     })();
-  }, [reloader])
+  }, [reloader]);
 
   return (
     <div className="app">

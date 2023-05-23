@@ -25,11 +25,11 @@ const TaskCard = ({ task, slnum }) => {
         }
     }
 
-    const handleTaskEditSubmit = async (id, newTitle) => {
-        const res = await axios.put(`http://localhost:3001/tasks/${id}`, {
-            id: id,
+    const handleTaskEditSubmit = async (newTitle) => {
+        const res = await axios.put(`http://localhost:3001/tasks/${task.id}`, {
+            id: task.id,
             title: newTitle + ' (edited)'
-        })
+        });
         handleEditTask(res.data);
         setShowEdit(false);
     }

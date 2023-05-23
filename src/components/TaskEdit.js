@@ -6,7 +6,7 @@ const TaskEdit = ({ task, onTaskEditSubmit }) => {
         <div >
             <form onSubmit={(e) => e.preventDefault()} className="book-edit" >
                 <input className="input" onChange={(e) => SetNewTitle(e.target.value)} value={newTitle} />
-                <button onClick={(e) => onTaskEditSubmit(task.id, newTitle)} className="button is-primary" >Update</button>
+                <button onClick={(e) => onTaskEditSubmit(newTitle)} className="button is-primary" >Update</button>
             </form>
         </div >
     )
