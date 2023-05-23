@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useEffect } from "react";
 import TaskCreate from './components/TaskCreate'
 import TaskList from "./components/TaskList";
 import axios from "axios";
-import TasksContext from "./contexts/tasks";
+import useTasksContext from "./hooks/useTasksContext";
 
 function App() {
-  const { setTasks } = useContext(TasksContext);
-  const { reloader } = useContext(TasksContext);
+  const { setTasks } = useTasksContext();
+  const { reloader } = useTasksContext();
 
   useEffect(() => {
     (async () => {
