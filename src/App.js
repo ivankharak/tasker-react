@@ -21,7 +21,7 @@ function App() {
       <div className="task-list" >
         <TaskList />
       </div>
-      <h1 className="title">Niyoga v6</h1>
+      <h1 className="title">Niyoga v7</h1>
       <TaskCreate />
     </div>
   );
