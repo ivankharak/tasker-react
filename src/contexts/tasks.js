@@ -67,11 +67,11 @@ const Provider = ({ children }) => {
         setTasks(delUpdatedTasks);
     }
 
-    const handleEditTask = async (newTask) => {
+    const handleEditTask = async (newTask, slnum) => {
         const editUpdatedTasks = [
-            ...tasks.slice(0, newTask.id - 1),
+            ...tasks.slice(0, slnum - 1),
             newTask,
-            ...tasks.slice(newTask.id)
+            ...tasks.slice(slnum)
         ]
         setTasks(editUpdatedTasks);
     }

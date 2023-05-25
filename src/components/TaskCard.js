@@ -30,7 +30,7 @@ const TaskCard = ({ task, slnum }) => {
             id: task.id,
             title: newTitle + ' (edited)'
         });
-        handleEditTask(res.data);
+        handleEditTask(res.data, slnum);
         setShowEdit(false);
     }
 
