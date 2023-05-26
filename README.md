@@ -64,6 +64,9 @@ Also the version 7 got introduced with some more methods. Those are -
 >* `del()`
 >* `delete()`
 
+>### Version 8 Chanachur 🥣
+>Version 8 `Chanachur` is urther developed with some bug fixes and patches. This version gives a finishing touch to the app.
+
 
 
 <br>
