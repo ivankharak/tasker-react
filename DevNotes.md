@@ -59,6 +59,9 @@ These methods can be used for deleting all tasks at once.
 * `delete()`
 
 
+## Version 8 Chanachur 🥣
+Version 8 `Chanachur` is urther developed with some bug fixes and patches. This version gives a finishing touch to the app. 
+
 ---
 ---
 ---
